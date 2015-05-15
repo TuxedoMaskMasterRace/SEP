@@ -966,7 +966,7 @@ public static void room6_13(){
 public static void room6_14(){
     System.out.println("There is an opening to the South... It's a dead end.");
     System.out.println("Which way do you choose?");
-    System.out.println("1. East");
+    System.out.println("1. South");
     switch (choice()) {
         case 1:
         room6_13();
