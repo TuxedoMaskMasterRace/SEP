@@ -36,8 +36,13 @@ public static void starting_room(){
 }
 public static int choice(){
     Scanner userchoice = new Scanner(System.in);
-    int choice = userchoice.nextInt();
-    return choice;
+    if(!userchoice.hasNextInt()){
+        userchoice.next();
+    } else {
+        int choice = userchoice.nextInt();
+        return choice;
+    }
+    return -1;
 }
 public static void transport1(){
     
@@ -1247,7 +1252,7 @@ public static void room8_11(){
     }
 }
 public static void room8_12(){
-    System.out.println("There are openings to the North, East, South, and West");
+    System.out.println("There are openings to the North and to the South");
     System.out.println("Which way do you choose?");
     System.out.println("1. North");
     System.out.println("2. South");
@@ -1267,8 +1272,8 @@ public static void room8_13(){
     System.out.println("There are openings to the North, South, and West");
     System.out.println("Which way do you choose?");
     System.out.println("1. North");
-    System.out.println("3. South");    
-    System.out.println("4. West");
+    System.out.println("2. South");    
+    System.out.println("3. West");
     switch (choice()) {
         case 1:
         room8_14();
